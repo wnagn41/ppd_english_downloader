@@ -48,7 +48,7 @@ Some less common statuses:
 
 Downloaded files are stored in the **browser's download directory**.
 
-![](./images/Snipaste_2025-03-08_08-55-31.png =50%x)
+![](./images/Snipaste_2025-03-08_08-55-31.png)
 
 ## Download Not Going Smoothly?
 
