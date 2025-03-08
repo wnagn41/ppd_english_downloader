@@ -4,13 +4,13 @@ Let's open a test page, here is [Artist Mafuyu's Works List Page](https://www.pi
 
 ## Start Crawling
 
-![](.\images\Snipaste_2025-03-08_08-41-02.png)
 
-Open the downloader panel, then click the "Start Crawling" button, and the program will automatically start crawling the works.
+Open the downloader panel, ![](./images/Snipaste_2025-03-08_09-22-06.png)then click the "Start Crawling" button, and the program will automatically start crawling the works.
 
+![](./images/Snipaste_2025-03-08_08-41-02.png)
 After crawling is complete, under default settings, the downloader will automatically start downloading files.
 
-?> During the first batch download, the browser may ask: Allow this site to download multiple files?
+?> 这个问题我无法复现 During the first batch download, the browser may ask: Allow this site to download multiple files?
 
 ![](./images/2019-07-31-10-16-38.png)
 
@@ -48,7 +48,7 @@ Some less common statuses:
 
 Downloaded files are stored in the **browser's download directory**.
 
-![](./images/Snipaste_2025-03-08_08-55-31.png)
+![](./images/Snipaste_2025-03-08_08-55-31.png =50%x)
 
 ## Download Not Going Smoothly?
 
