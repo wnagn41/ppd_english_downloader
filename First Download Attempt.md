@@ -52,6 +52,6 @@ Downloaded files are stored in the **browser's download directory**.
 
 ## Download Error?
 
-If you encounter problems during download, please refer to the [FAQ](../en/FAQ) page.
+If you encounter problems during download, please refer to the [FAQ](/en/FAQ) page.
 
-If you still can't find the reason, please refer to the [Contact Info](../en/Contact_Info) page.
+If you still can't find the reason, please refer to the [Contact Info](/en/Contact_Info) page.
