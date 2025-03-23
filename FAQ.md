@@ -196,69 +196,69 @@ Try the following:
 4. If the issue persists, try downloading a few works individually. If some work but others don't, it might be due to **illegal characters in the filename**. Try modifying the naming rules and download again.
 5. If the issue still can't be resolved, please refer to the "Contact Me" page in this wiki to report the issue.
 
-## 任务卡住怎么办
+## What to do if a task gets stuck
 
-这一般是网络问题，网络情况越差，越容易遇到这个问题。
+Caused by network issue in most case. The worse the network condition, the more likely this problem will occur.
 
-如果你在抓取任务时就卡住，可以尝试等待一段时间，看过一段时间之后是否能够继续抓取。如果不能，建议刷新页面重新抓取。
+If task gets stuck during crawling, you can try waiting for a while to see if it can continue. If not, it's recommended to refresh the page and restart the crawling.
 
-如果在下载时卡住，可以先暂停任务然后点击开始下载；或者关闭页面，之后再打开这个页面，继续下载。
+If it gets stuck during downloading, you can pause the task and then click to start download again; or close the page and reopen it later to continue.
 
-?>如果你的网络情况比较差，可以把下载线程设置的小一些，减小卡住的几率。
+?> If your network condition is poor, you can reduce the number of download thread(range 1 to 6, default 5) to decrease the chance of getting stuck.
 
-## 下载卡住时会自动重试吗
+## Will program re-download automatically when the task gets stuck?
 
-会。
+Yes.
 
-当网络状况较差时，下载可能会因为超时或者网络断开而卡住。本程序会自动重试下载出错的文件。
+When it comes to the network fitter, the task may get stuck due to timeout or network disconnection. The program will automatically retry downloading the failed files.
 
-## 一直卡住，无法下载到任何图片
+## Keep getting stuck, unable to download any images
 
-首先检查网络问题，如果网络没问题（可以正常访问 Pixiv，网速也很快），那么你可以检查一下系统盘（一般是 C 盘）剩余空间。
+First, check your network. If the network works (you can access Pixiv normally and the speed is fast), then you should check the remaining space on your system disk (usually C drive).
 
-如果系统盘剩余空间比较小，Chrome 可能会阻止一些较大的 xhr 请求，导致下载一直失败。请清理一下空间再尝试下载。这个原因是由 Reinford 找出来的。
+If the system disk is running critically low on space, Chrome might block some large xhr requests, causing continuous download failures. Please free up some space and try downloading again. This cause was discovered by Reinford.
 
-*备注：在这种情况下，Chrome 不会阻止 fetch 请求*
+*Note: In this case, Chrome won't block fetch requests*
 
-## 下载到的图片是损坏的
+## Images are corrupted
 
-下载的图片只能显示一部分/一半，剩余部分没有图像。
+The Images only have part/half of the content.
 
-这可能是下载时网络出现问题，图片加载到一半之后失败了。请重新下载损坏的图片/作品。
+Might be network issues during download. Please re-download the corrupted image/work which failed halfway.
 
-如果重新下载后还是损坏的，可能是这个图片存在缓存。请清除浏览器的缓存之后，刷新页面重新下载这个作品。
+If it's still corrupted after re-downloading, it might be broswer caching problem. Please clear your cache, refresh the page, and re-download the work.
 
-## 下载进度条变成红色是怎么回事
+## What happen when the download progress bar turns red?
 
-这表示这个进度条上的文件下载出现了错误，下载器会尝试重新下载它。
+This indicates that an error occurred while downloading this file. The downloader will re-download it.
 
-你不需要做出处理。
+No need to do anything.
 
-## 下载失败：USER_CANCELED
+## 117269206_p0 not saved, code: USER_CANCELED
 
-如果出现这样的错误提示，可能的原因有：
+If you see this error message, possible reasons include:
 
-1. 下载时弹出另存为对话框
-2. 文件名超长
-3. 其他原因
+1. "Save As" popped up during download
+2. File name is too long
+3. Other reasons
 
-前两条的解决方法写在下面。
+Solutions for the first two case are listed below.
 
-## 下载时弹出另存为对话框
+## "Save As" dialog box pops up during download
 
-*下载时弹出文件另存为对话框/另存为窗口/保存窗口*
+*Save As dialog/window pops up during download*
 
-如果下载时浏览器弹出了“另存为”对话框，请检查以下可能的原因：
+If the "Save As" dialog pops up during download, please check the following possible reasons:
 
-**原因 1**：请确认你在浏览器设置里**关闭**了“下载前询问每个文件的保存位置”。
+**Reason 1**: Please confirm that you have **disabled** "Ask where to save each file before downloading" in your browser settings.
 
-如果开启了这个设置，那么每次下载都会出现“另存为”对话框，所以你应该关闭这个设置。
+If this setting is enabled, the "Save As" dialog will appear for every download, so you should disable this setting.
 
-**原因 2**：可能是下载的文件里有重复的文件名，请检查你的命名规则。
+**Reason 2**: There might be duplicate file names in the download. Please check your naming rules.
 
-如果你的命名规则里带有 `{id}` 标记或者 `{p_num}`，那么应该不会有重名文件；否则就可能有重名文件。
+If your naming rules include `{id}` or `{p_num}` tags, there shouldn't be duplicate file names; otherwise, duplicate names might occur.
 
-比如作品 id 78279423，有三张图片，`{id}` 或者 `{p_num}` 标记会添加序号，这样就不会重名：
+For example, if id 78279423 is a set with three images, `{id}` or `{p_num}` tags will add sequence numbers, preventing duplicate names:
 
 ```
 78279423_p0.jpg
@@ -266,7 +266,7 @@ Try the following:
 78279423_p2.jpg
 ```
 
-如果不带序号，就会重名：
+Without sequence numbers, the names would be duplicated:
 
 ```
 78279423.jpg
@@ -274,133 +274,133 @@ Try the following:
 78279423.jpg
 ```
 
-当命名规则里没有 `{id}` 或者 `{p_num}`，则要留意是否会出现重名问题。
+When the naming rules don't include `{id}` or `{p_num}`, be aware of potential duplicate name issues.
 
-**原因 3**：可能是因为文件名过长。
+**Reason 3**: The file name might be too long.
 
-一般来说，大部分操作系统的文件名长度限制是 255 个字符。如果文件名很长，字符数量超出限制，则浏览器可能无法保存文件，而是出现“另存为”对话框，让用户进行操作。
+Generally, most operating systems have a file name length limit of 255 characters. If the file name is too long and exceeds this limit, the browser might not be able to save the file, instead showing the "Save As" dialog for user action.
 
-如果你是 Windows 操作系统，并且文件保存在本机硬盘上，应该不会遇到这个问题，因为在这种情况下，Chrome 会自动截断超出长度的字符，让文件能够成功保存。
+If you're using Windows and saving files to a local hard drive, you shouldn't encounter this issue because Chrome will automatically truncate excess characters to ensure successful saving.
 
-但如果是其他情况，例如你使用的是某些 Linux 操作系统，或者文件的保存位置是网络位置（NAS），那么 Chrome 可能无法采取正确的措施，这会导致文件保存失败，有可能出现“另存为”对话框。
+However, in other cases, such as using certain Linux operating systems or saving to network locations (NAS), Chrome might not handle this correctly, leading to save failures and potentially triggering the "Save As" dialog.
 
-**原因 4**：可能是因为下载位置不存在
+**Reason 4**: The download location might not exist
 
-例如，你浏览器设置里的文件下载位置是 `D:\downloads`，如果这个位置不存在了，也会弹出另存为对话框。
+For example, if your browser's download location is set as `D:\downloads` and this location no longer exists, the "Save As" dialog will appear.
 
-## 文件名太长怎么办
+## What to do if the file name is too long
 
-*文件名超长/文件名太长*
+*File name too long/File name exceeds length limit*
 
-如果你因为文件名超长导致无法保存文件，那么你可以打开下载器面板，在“更多”选项卡的“命名”部分，启用“文件名长度限制”。
+If you can't save files due to excessively long file names, you can open the downloader panel, go to the "More" tab, and enable "File name length limit" in the "Naming" section.
 
-“文件名长度限制”功能可以让你设置文件名的最大长度。如果文件名超出长度，下载器会截断多余的字符，让文件能够正常保存。
+The "File name length limit" feature allows you to set a maximum length for file names. If a file name exceeds this length, the downloader will drop the excess characters to ensure saving.
 
-## 为什么下载后会自动打开图片
 
-*下载后自动打开图片/自动打开文件/自动打开 txt 文件*
+## Why do images open automatically after download
 
-下载的文件默认不会自动打开。如果你发现某一类文件会在下载后自动打开，请检查你在下载此类文件时，是否在底部下载栏里勾选了“总是打开此类文件”。
+*Images/files/txt files open automatically after download*
+
+Downloaded files won't open automatically by default. If you find certain types of files opening automatically after download, please check if you've selected "Open certain file types automatically after downloading" in the bottom download bar when downloading such files.
 
 ![](./images/20220318174220.png)
 
-如果你勾选了这个选项，就取消勾选即可。
+If you've selected this option, simply uncheck it.
 
-## 为什么在搜索页面不会自动开始下载
+## Why doesn't downloading start automatically on search pages
 
-你可以关闭“预览搜索页面的筛选结果”，并且启用“自动开始下载”，这样就可以自动开始下载了。
+You can disable "Preview filter results on search page ? " and enable "Download starts automatically ? " to make downloading start automatically.
 
-为什么启用了“预览搜索页面的筛选结果”就不会自动开始下载了呢？请查看这个选项的说明。
+[Preview filter results on search page ? ](zh-cn/设置-更多?id=预览搜索页面的筛选结果)
 
-[预览搜索页面的筛选结果](zh-cn/设置-更多?id=预览搜索页面的筛选结果)
+## After offline installation, a prompt appears when the browser starts
 
-## 离线安装之后，浏览器启动时会出现提示
-
-如果你离线安装了本程序，当浏览器启动时，可能会在右上角提示：请停止以开发者模式运行的扩展程序。
+If you've installed this program offline, a prompt might appear in the top right corner when the browser starts: Please stop running extensions in developer mode.
 
 ![](./images/2019-10-18_17-12-00.jpg)
 
->Chrome 84 版本之后没有这个弹窗了。但是 Edge 浏览器目前还有。
+>This prompt no longer appears after Chrome version 84. However, it still appears in Edge browser.
 
-如果你想消除这个提示，以下提供一些办法：
+If you want to remove this prompt, here are some solutions:
 
-1. 如果你安装有火绒杀毒软件，你可以使用它的屏蔽弹窗功能，屏蔽这个弹窗。
+1. If you have Huorong antivirus software installed, you can use its popup blocking feature to block this prompt.
 
 ![](./images/2019-10-18_17-17-00.png)
 
-注意只选择这个弹窗，不要把整个 chrome 都屏蔽了。
+Be careful to only block this prompt, not the entire Chrome window.
 
-来源：[一届书生](https://www.cnblogs.com/52dxer/p/11067617.html ':target=_blank')
+Source: [一届书生](https://www.cnblogs.com/52dxer/p/11067617.html ':target=_blank')
 
-*在线安装本扩展不会出现弹窗警告。*
+*Online installation of this extension won't trigger this warning.*
 
 ## Date format error!
 
-如果启用了选项“设置投稿时间”，需要输入起始时间和结束时间。
+If the set "Posting date ?" option is enabled, you need to input start and end times.
 
-如果输入的时间不能被解析为有效的时间，就会出现警告信息：`Date format error!`
+If the input time can't be parsed as a valid time, a warning message will appear: `Date format error!`
 
-## 无权访问某个作品
+## No access to a specific work
 
-这是因为在获取某个作品时出现了无法处理的错误。
+This occurs when an unhandled error happens while trying to access a specific work.
 
-这是一个网络请求的错误，可能这个作品是私密的作品，或者只是单纯的网络问题。
+This is a network request error, possibly because the work is private or simply due to network issues.
 
-你可以打开这个 id 的作品页面，如果它是正常的，你可以在这个页面直接下载它。
+You can open the work's page directly using its id. If it's accessible, you can download it directly from this page.
 
-## 下载（抓取）按钮不显示
 
-这可能是某些设置项的值有误，导致下载器出错。
+## Download (Crawl) button not showing
 
-你可以尝试打开下载面板-“更多”选项卡-管理设置-重置设置，然后刷新页面。
+This might be due to incorrect values in some settings, causing the downloader to malfunction.
 
-## 如何下载 ID 列表
+You can try opening the download panel, go to the "More" tab, manage settings, reset settings, and then refresh the page.
 
-如果你有作品的 id 列表，想根据 id 列表进行下载，需要打开 Pixiv 主页，然后打开下载器面板，可以看到这个按钮：
+## How to download from an ID list
 
-*输入id进行抓取*
+If you have a list of work IDs and want to download based on this list, open the Pixiv homepage, then open the downloader panel, where you'll see this button:
 
-点击这个按钮会出现一个输入框，把 id 列表复制进去就可以开始抓取了。
+*Type ID to crawl*
 
-## 怎么停止抓取
+Clicking this button will show an input box. Copy your ID list into it to start crawling.
 
-怎么停止/中止/中断抓取？
+## How to stop crawling
 
-目前没有控制按钮可以停止抓取。你可以刷新页面来强制停止抓取。
+How to stop/abort/interrupt crawling?
 
-## 浏览器启动时卡住
+Currently, there's no control button to stop crawling. You can refresh the page to force pause crawling.
 
-Chrome很卡/卡顿/Chrome启动无响应/卡一会儿/浏览器卡顿/浏览器很卡
+## Browser gets stuck when boot up
 
-这可能是你的下载记录太多导致的。你可以在“清理浏览数据”界面查看下载记录的数量：
+Chrome is lagging / really lag / Chrome starts unresponsive / stuck for a while / browser lagging
+
+This might be caused by too many download records. You can check the number of download records in the "delete browsing data" interface:
 
 ![](./images/20211112175156.png)
 
-下载记录太多可能会导致浏览器卡顿，特别是浏览器刚启动时，以及打开下载管理页面时。
+Too many download records might cause browser lag, especially during browser startup and when opening the download management page.
 
-一般来说，如果下载记录的数量超过 10,000 个，你就可以清理了。
+Generally, if the totals of download records exceeds 10,000, you can clear them.
 
-如果清理下载记录之后，问题依然没有解决，请考虑卸载和重装浏览器。
+If the problem persists after clearing download records, consider uninstalling and reinstalling the browser.
 
-## 怎么分批下载
+## How to download in batches
 
-分批下载/分批抓取
+Batch download/batch fetch
 
-在一些页数较多的页面里，如果你预计到抓取结果太多，可以考虑分批进行抓取和下载。
+On pages with a large number of pages, if you are expecting too many crawls, you may want to consider crawling and downloading in batches.
 
-例如：
+For example:
 
-1. 在第 1 页，设置“抓取页数”为 100，然后开始抓取和下载。
-2. 下载完成后，跳转到第 101 页，然后再次抓取 100 页。因为下载器会从当前页面开始计算页数，所以这样可以抓取 101 - 200 页。
-3. 以此类推。
+1. on page 1, set the "How many pages to crawl ?" to 100, and then start crawling and downloading.
+2. After the download is complete, jump to page 101, and then crawl page 100 again. Because the downloader will count the number of pages from the current page, so you can grab 101-200 pages.
+3. and so on.
 
-## 安卓系统里文件名的排序混乱
+## Sorting of filenames in android is confusing
 
-*安卓文件管理器排序错误/排序混乱/文件名排序错误/文件排序混乱*
+* Android File Manager Sorting Error / Sorting Confusion / Filename Sorting Error / File Sorting Confusion *
 
-pixiv 下载的文件是带有 id 和序号的，假设一个作品有很多张图片，并且 id 和序号在文件名的开头，像这样：
+pixiv downloads files with id and serial number, suppose a work has many images and the id and serial number are at the beginning of the filename, like this:      
 
-```
+``
 94495223_0
 94495223_1
 94495223_2
@@ -409,15 +409,15 @@ pixiv 下载的文件是带有 id 和序号的，假设一个作品有很多张�
 94495223_5
 ......
 94495223_20
-```
+``
 
-以上是序号 0 到序号 20 的示例。
+The above is an example for serial number 0 to serial number 20.
 
-我们通常希望下载下来的图片在资源管理器（文件管理器）里也能按序号排序。那么我们在资源管理器里选择“文件名”排序方式就可以了。
+Usually we want the downloaded images to be sorted by serial number in Explorer (file manager). So we can do that by selecting the "Filename" sorting method in Explorer.
 
-但是使用安卓系统的用户经常会发现他们所看到的排序是混乱的，例如（仅列出序号部分）：
+However, Android users often find that they see the sorting as confusing, e.g. (only the serial number part is listed):
 
-```
+``
 0
 1
 10
@@ -439,15 +439,15 @@ pixiv 下载的文件是带有 id 和序号的，假设一个作品有很多张�
 7
 8
 9
-```
+``
 
-这个问题的原因是：这个资源管理器把文件名作为字符串进行排序，结果就出现了这种情况。
+The reason for this problem: this explorer sorts file names as strings, and this is what happens as a result.
 
-如果把序号部分解析为数字再排序，就不会出现这个问题。
+If the serial number part is parsed as a number and then sorted, this problem does not occur.
 
-那么怎么解决安卓上的这个问题呢？你可以在下载器的“更多”选项卡--“命名”分类里，开启设置“**在序号前面填充 0**”。这样就能解决这个问题。
+How to solve this problem on Android? You can enable the setting "**Add 0 in front of the serial number ? ** " in the "More" tab of the downloader - Name. This will solve the problem.
 
-启用“在序号前面填充 0”之后，序号会变成下面这样：
+After enabling "Fill 0 in front of serial number", the serial number will look like the following:
 
 ```
 000
@@ -473,206 +473,206 @@ pixiv 下载的文件是带有 id 和序号的，假设一个作品有很多张�
 020
 ```
 
-因为在序号前面填充 0 之后，序号的长度都是一样的，所以在安卓上也能够按照正常的顺序排列了。
+Since the length of the serial number is the same after 0 is put in front of it, the serial number can be sorted in the normal order on Android.
 
-## 怎么让下载的文件按照网页上的顺序排序
+## How to make downloaded files sorted in the order they appear on the web page
 
-*图片排序，作品排序，文件排序*
+*Sort images, works, and files.
 
-怎么让下载的作品保持和网页上一样的顺序呢？
+How to keep the downloaded works in the same order as on the web page?
 
-在大部分页面里，作品都是按照作品 id 倒序排序的。越晚发表的作品，其 id 越大。
+On most pages, entries are sorted in reverse order by entry id. The later the work is published, the larger the id.
 
-你在网页上看的作品排序可能是这样的：
+That's probably what you'll see on the web page:
 
-```
+``
 96954935
 96894692
 96800281
 96659987
 96628297
-```
+``
 
-下载器默认的命名规则会在文件名的开头使用 `{id}`。你可以让下载后的文件按照文件名排序，也就是使用作品 id 来排序。
+The downloader's default naming convention uses `{id}` at the beginning of the filename. You can have the downloaded files sorted by filename, i.e. using the work id.
 
-不过资源管理器里的默认排序是正序排列的（从小到大），所以你看到的文件的顺序和网页上是相反的。如果你想让文件的顺序和网页上的一致，你可以在资源管理器里更改排序方式，让文件名倒序排列。
+However, the default sorting in Explorer is orthogonal (smallest to largest), so you see the files in the reverse order of the web page. If you want the order of the files to be the same as on the web page, you can change the sorting method in Explorer so that the filenames are sorted in reverse order.
 
-## 下载收藏的作品时怎么让文件按照收藏顺序排序
+## How to make files sorted in favorites order when downloading favorites
 
-下载书签里的作品时，怎么让下载的文件和作品的收藏顺序一致？
+When downloading a bookmarked work, how do I make the downloaded file match the bookmarked order of the work?
 
-之所以会有这个问题，是因为收藏/书签里的作品的排序不是按照作品 id 排序的，而是按照你收藏它的时间来排序的。
+The reason for this problem is that the works in favorites/bookmarks are not sorted by the id of the work, but by the time you bookmarked it.
 
-默认的，你最新收藏的作品会排在前面，最早收藏的作品会排在后面。怎么让下载后的文件按照收藏的顺序排列呢？
+By default, your newest favorite will be in the first place, and the earliest favorite will be in the second place. How can I make the downloaded files sorted by the order of favorites?
 
-你可以修改命名规则，在文件名的开头使用 `{bmk_id}`，例如 `{bmk_id}-{id}`。
+You can change the naming convention by using `{bmk_id}` at the beginning of the file name, e.g. `{bmk_id}-{id}`.
 
-- `{bmk_id}` Bookmark Id。你收藏的每一个作品都会有一个 Bookmark Id。收藏的时间越晚，Bookmark Id 就越大。当你下载你的收藏时，可以使用 `{bmk_id}` 作为排序依据。
+- `{bmk_id}` Bookmark Id. Each entry in your collection will have a Bookmark Id. The later the collection, the larger the Bookmark Id. When you download your favorites, you can use `{bmk_id}` as a sorting basis.
 
-`{bmk_id}` 是一串数字，但它不是作品 id，而是你收藏这个作品时产生的一个数字。在文件名的开头使用这个数字，可以用来对文件进行排序。
+`{bmk_id}` is a number, but it's not a bookmark id, it's a number generated when you bookmarked the bookmark. Using this number at the beginning of a file name can be used to sort the file.
 
-不过资源管理器里的默认排序是正序排列的（从小到大），所以你看到的文件的顺序和网页上是相反的。如果你想让文件的顺序和网页上的一致，你可以在资源管理器里更改排序方式，让文件名倒序排列。
+However, the default sorting in Explorer is orthogonal (smallest to largest), so you see the files in the opposite order from the web page. If you want the order of the files to match the order on the web page, you can change the sorting in Explorer so that the file names are in reverse order.
 
-## 搜索标签时最多只能抓取 1000 页怎么办
+## What to do if you can only grab up to 1000 pages when searching tags
 
-搜索页面不能抓取所有作品怎么办？目前没有能够直接解决这个的办法，需要你多花点时间来手动解决。
+What if the search page doesn't capture all the entries? There is no way to fix this directly, it will take you a little more time to do it manually.
 
-有些 tag 的搜索结果很多，例如：
+Some tags have a lot of search results, for example:
 
 https://www.pixiv.net/tags/%E8%83%8C%E6%99%AF/artworks
 
-“背景” tag 现在有 172,734 个作品。一页显示 60 个作品，总页数接近 2900 页。
+The "background" tag now has 172,734 entries. One page shows 60 entries, totaling nearly 2900 pages.
 
-但是你可能只能查看到 1000 页。当你位于第 1000 页时。底部的页码也到头了，没有后续的页码：
+But you may only be able to view 1000 pages. When you are on page 1000. The page number at the bottom also ends, and there are no subsequent page numbers:
 
 https://www.pixiv.net/tags/%E8%83%8C%E6%99%AF/artworks?p=1000https://www.pixiv.net/tags/%E8%83%8C%E6%99%AF/artworks?p=1000
 
-![](./images/20220304162133.png)
+! [](. /images/20220304162133.png)
 
-抓取不完了，这是怎么回事呢？
+The crawl won't finish, what's going on?
 
-1. 这是 pixiv 的限制，下载器无法破解。
-2. pixiv 普通用户最多可以查看 1000 页，pixiv 高级会员最多可以查看 5000 页。
-3. 你能够查看到多少页，下载器也就能下载到多少页。
+1. this is pixiv's limitation, the downloader can't be broken.
+2. pixiv regular users can view up to 1000 pages, pixiv premium members can view up to 5000 pages. 3.
+3. how many pages you can view, how many pages the downloader can download.
 
-**怎么解决这个问题**？以下是一些可行的方法：
+**How to solve this problem**? Here are some possible ways:
 
-- 方法 1：修改排序方式来抓取更多作品
+- Method 1: Modify the sorting method to grab more works
 
-![](./images/20220304162041.jpg)
+! [](. /images/20220304162041.jpg)
 
-默认情况下搜索结果的排序方式是从新到旧。你可以先正常抓取和下载 1000（或者 5000）页，下载完成之后，在第一页点击“按旧排序”，这样搜索结果的排序方式是从旧到新，这样你就能够下载到更多的作品了，最多可以下载到 2000（或者 10000）页的作品。但是如果这样还是不能下载到所有作品，那就需要考虑其他办法了。
+By default the search results are sorted from newest to oldest. You can crawl and download 1000 (or 5000) pages normally, and after downloading, click "Oldest" on the first page, so that the search results will be sorted from old to new, and you will be able to download more works, up to 2000 (or 10000) pages of works. But if you still can't download all the works, then you need to consider other ways.
 
-- 方法 2：使用时间段筛选
+- Method 2: Filter by time period
 
-你可以在搜索页面点击“搜索条件”，然后设置“时间”选项为“指定时间”。
+On the search page, you can click "Search Option", and then set the "Period" option to "Select a Period".
 
-![](./images/20220304162104.png)
+You can set the "Period" option to "Select a Period". [](. /images/20220304162104.png)
 
-例如，你可以设置时间范围为某一年，然后查看和下载这一年里发表的作品。
+For example, you can set the timeframe to a particular year, and then view and download the work published during that year.
 
-下载完成后，再搜索另一年里发表的作品，并下载它们。以此类推。
+Once downloaded, you can search for works published in another year and download them. And so on.
 
-- 方法 3：购买 pixiv 高级会员（premium）
+- Method 3: Purchase a pixiv Premium Membership
 
-因为 pixiv 高级会员（premium）可以查看 5000 页，所以不容易遇到这个问题。相比之下，普通用户只能查看 1000 页，遇到这个问题的几率就比较高。
+Since pixiv premium members can view 5000 pages, they are less likely to encounter this problem. In contrast, ordinary users can only view 1000 pages, so the chance of encountering this problem is higher.
 
-## 下载时发生错误，状态码为 0
+## An error occurred while downloading and the status code is 0.
 
-有些用户可能会遇到下面的错误：
+Some users may encounter the following error:
 
+``
+An error occurred while downloading with a status code of 0. The request was unsuccessful. Possible causes:
+
+1. The remaining space on the system disk may be insufficient (recommended remaining space is greater than 4GB). Please try to clear the system disk space, and then restart your browser to continue the incomplete download.
+
+2. Network error. The problem may be caused by a network proxy.
 ```
-下载时发生错误，状态码为 0，请求未成功。可能的原因： 
 
-1. 系统磁盘的剩余空间可能不足（建议剩余空间大于 4GB）。请尝试清理系统磁盘空间，然后重新启动浏览器，继续未完成的下载。 
+This is due to the fact that the browser directly returns a 200 failed status for requests made by the downloader (the request was successful but returned a failure. The status of the XHR request inside the downloader is 0).
 
-2. 网络错误。可能是网络代理导致的问题。
-```
+Possible causes and solutions:
 
-这是因为对于下载器发出的请求，浏览器直接返回了 200 failed 状态（请求成功但返回了失败的结果。下载器内部 XHR 请求的 status 是 0）。
+1. The remaining space on the system disk may be insufficient (it is recommended that the remaining space be greater than 4GB). Note that you need to look at the remaining space on the [system disk], not other disks. If the remaining space of the system disk is small, clean up the space.
+2. network error. It is known that some China Mainland users use Nginx to reverse proxy on p-sites, or Apache to reverse proxy on p-sites, which may cause this problem. Please disable these anti-proxy software, and use ladder to access p-site instead, then this error will not occur.
 
-可能的原因以及解决方法：
+## How do I use a ladder?
 
-1. 系统磁盘的剩余空间可能不足（建议剩余空间大于 4GB）。注意要看【系统盘】的剩余空间，而不是其他盘。如果系统盘的剩余空间小，就清理空间。
-2. 网络错误。目前已知一些国内用户使用 Nginx 反代理上 p 站，或者 Apache 反代理上 p 站，有可能发生这个问题。请关闭这些反代理软件，换成使用梯子访问 p 站，就不会出现这个错误了。
+Ladder is commonly known as VPN software.
 
-## 怎么用梯子？
+At present, it is easy for white people to make the mistake of buying some paid ladder (vpn) software, but most of these software's are money pit and poor quality. For example: blue light, honeycomb vpn, westworld, cheetah gas pedal and so on.
 
-梯子就是俗称的翻墙软件。
+In these software, it's basically a fixed number of lines that are maintained by the software developers themselves. You can't switch to another airport's VPN service. If the VPN service that comes with this software doesn't work well, there's nothing you can do about it.
 
-目前小白很容易错误的购买一些收费的梯子（vpn）软件，但这些软件的大多是坑钱的，质量不佳。例如：蓝灯、蜂窝vpn、西部世界、猎豹加速器等。
+Mature ladders are free, and their software is just a tool that doesn't come with a VPN feature. The popular programs on Windows are V2rayN and Clash, and Clash seems to be more convenient for cell phones.
 
-在这些软件里，它的线路基本都是固定的一些线路，是软件开发商自己维护的。你不能换成别的机场的翻墙服务。如果这个软件自带的翻墙服务不好用，那你也没办法对它怎么样。
-
-成熟的梯子是免费的，其软件只是一个工具，不自带翻墙功能。现在 Windows 上流行的软件是 V2rayN 和 Clash。手机上的话 Clash 似乎更方便一些。
-
-有了梯子软件后，你需要去机场（提供翻墙服务的网站）购买翻墙服务，然后在梯子里使用。机场提供的线路不管是在数量上还是速度、稳定性上都比那些坑钱的软件更好。有些机场提供免费路线（免费的质量就差一些）。如果一个机场不好用了，你可以换成别的机场。
+Once you have the ladder software, you need to go to the airport (the website that provides the VPN service) to buy the VPN service, and then use it in the ladder. The routes offered by airports are better than the money-hungry software, both in number and in speed and stability. Some airports offer free routes (the free ones are of lesser quality). If an airport doesn't work well anymore, you can switch to another one.
 
 ---------
 
-有些新人不知道怎么用梯子，我在这里发个我现在用的梯子网站（机场）：
+Some newcomers don't know how to use a ladder, so I'll post here the ladder site (airport) I'm using now:
 
-?>机场网址：[[TTK Cloud](https://www.ttkcloud.icu/#/register?code=6m4hMaPu)](https://www.ttkcloud.icu/#/register?code=6m4hMaPu ':target=_blank')
+? >Airport URL: [[TTK Cloud](https://www.ttkcloud.icu/#/register?code=6m4hMaPu)](https://www.ttkcloud.icu/#/register?code=6m4hMaPu ':target=_ blank')
 
-域名是塔塔开！ttk cloud。这个梯子我用了很久了，稳定，速度快，不易出错。
+The domain name is Tata Kai! ttk cloud. this ladder I used for a long time, stable, fast and not easy to error.
 
-机场的使用方法是先购买流量套餐，之后获取订阅链接，最后到 ssr、v2ray、clash 里使用。网站里也有教程的，可以注册看下。
+The way to use the airport is to buy a traffic package first, then get a subscription link, and finally go to ssr, v2ray, and clash to use it. There is also a tutorial in the website, you can sign up to see it.
 
-因为有很多国内用户遇到网络问题，所以在这里发一下，希望能有所帮助。
+Because there are a lot of domestic users encounter network problems, so here to post, hope to help.
 
 --------
 
-很多机场的套餐一般都分包月的（到期的话就过期）或者按流量的（购买一定额度的流量，不用完就不会过期）。
+Many airports have monthly packages (which expire when they expire) or traffic packages (where you buy a certain amount of traffic and it doesn't expire if you don't use it all).
 
-这就像一些点卡游戏的月卡或者点卡一样，需要你根据自己的需求来选择。
+It's like a monthly or point card for some point game, you need to choose according to your needs.
 
-所以如果你用的流量多，可以考虑月卡。用的流量少，就偏向于点卡。
+So if you use a lot of traffic, consider a monthly card. If you use less traffic, you will favor the point card.
 
-## Pixiv 返回了空数据
+## Pixiv returned empty data
 
-当你在搜索页面进行抓取时，可能会在日志里看到提示：
+You may see hints in the logs when you do a crawl on the search page:
 
+``
+Pixiv returned empty data. The downloader has paused the crawl and will wait a few minutes before resuming.
 ```
-Pixiv 返回了空数据。下载器已暂停抓取，并且会在等待几分钟后继续抓取。
-```
 
-这是因为 pixiv 最近做出了反爬取措施，如果短时间内抓取几百页，就会触发限制，pixiv 直接返回空数据，这将导致下载器什么都抓取不到。
+This is because pixiv has recently made anti-crawling measures, if several hundred pages are crawled in a short period of time, a limit will be triggered and pixiv will return empty data directly, which will cause the downloader to crawl nothing.
 
-所以当触发了这个限制之后，下载器必须等待一段时间（目前是 200 秒），等待限制解除之后再继续抓取。
+So when this limit is triggered, the downloader has to wait for a certain period of time (currently 200 seconds) for the limit to be lifted and then continue crawling.
 
-## 作品总数为 0，Pixiv 可能拒绝了此次抓取
+## The total number of entries is 0, Pixiv may have rejected the fetch.
 
-如果你在搜索页面已经被限制了抓取，此时再开始抓取，就会出现“作品数量为 0”的错误。
+If you have already been restricted from crawling on the search page, and then start crawling again, you will get a "Number of entries is 0" error.
 
-这是因为 pixiv 的反爬取措施导致的，请过几分钟后重试。
+This is due to pixiv's anti-crawl measures, please try again in a few minutes.
 
-## 429 错误
+## 429 Error
 
-*429 状态码*
+*429 Status code
 
-抓取遇到429问题： 
+The crawl encountered a 429 problem:
 
-短时间内抓取太多就会这样。 这是 pixiv 的反爬取措施，在几分钟内不能进行抓取。
+This happens when there are too many crawls in a short period of time. This is pixiv's anti-crawl measure that prevents crawling for a few minutes.
 
-即使出现了429，但是下载器依然可以抓取完毕，只是需要的时间比以前多。 
+Even though there is a 429, the downloader can still finish crawling, it just takes more time than before.
 
-如果你不想遇到429，可以在下载器设置中启用“减慢抓取速度”。（但这会导致抓取需要更长的时间）
+If you don't want to get a 429, you can enable "Slow down crawl ?" in the downloader settings. (But this will cause the crawl to take longer)
 
-如果你想要最快的抓取速度，就不要开启“减慢抓取速度”，让下载器自动重试抓取即可。
+If you want the fastest fetch possible, don't enable "Slow down crawl ?" and let the downloader automatically retry the fetch.
 
-## 会被封号吗
+## Will you be blocked?
 
-*如果下载得太多会被 ban 吗？*
+*Will I be banned if I download too much? *# Is it possible to get banned if you download too much?
 
-如果你下载得太多，可能会收到 pixiv 的“过度访问警告”邮件，内容如下：
+If you download too much, you may receive an "Excessive Access Warning" email from pixiv with the following message:
 
-![pixiv 的警告邮件](./images/20220618154139.jpg)
+! [pixiv's warning email](. /images/20220618154139.jpg)
 
-当你收到邮件之后，如果仍然大量下载，有可能会被 pixiv 永久封禁账户。
+If you continue to download large quantities after receiving the email, you may have your account permanently banned by pixiv.
 
-被封禁的账户无法收藏、点赞作品，也无法关注画师。但是仍然可以正常浏览和下载大部分内容。
+You will not be able to favorite, like, or follow artists on your banned account. However, you can still browse and download most of the content.
 
-如果你被封禁了，可以尝试注册新的账号。
+If you've been banned, try registering a new account.
 
-?>下载器现在可以检测用户是否在最近收到了此信息，如果检测到，就会自动暂停下载，避免用户被封号。
+? >Downloader now detects if a user has received this message recently, and if it does, it will automatically pause the download to avoid the user being blocked.  
 
-## 无法打开 EPUB 文件
+## Unable to open EPUB file
 
-*无法打开 EPUB 小说；小说的 EPUB 文件损坏*
+* Can't open EPUB novel; novel's EPUB file is corrupted.
 
-如果你在打开下载器生成的 EPUB 小说文件时出现错误，请尝试更换小说阅读器。
+If you get an error when opening an EPUB novel file generated by the downloader, try changing your novel reader.
 
-![](./images/20230217200132.jpg)
+! [](. /images/20230217200132.jpg)
 
-很显然，WPS 不是一个合适的 EPUB 阅读器。
+Obviously, WPS is not a proper EPUB reader.
 
-有些软件也同样如此。
+The same is true of some software.
 
-![](./images/20230217200138.jpg)
+! [](. /images/20230217200138.jpg)
 
-我建议你自行搜索“epub 阅读器”来找到真正适合阅读 EPUB 小说的软件。
+I suggest you search for "epub reader" to find a program that is really suitable for reading EPUB novels.
 
-这里是一些可以在浏览器里直接打开 EPUB 小说的网站：
+Here are some sites that open EPUB novels directly in your browser:
 
 https://www.neat-reader.cn/webapp#/
 
