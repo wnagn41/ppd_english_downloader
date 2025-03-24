@@ -539,7 +539,7 @@ The crawl won't finish, what's going on?
 
 - Method 1: Modify the sorting method to grab more works
 
-! [](./images/Snipaste_2025-03-23_20-08-25.png)
+![](./images/Snipaste_2025-03-23_20-08-25.png)
 
 By default the search results are sorted from newest to oldest. You can crawl and download 1000 (or 5000) pages normally, and after downloading, click "Oldest" on the first page, so that the search results will be sorted from old to new, and you will be able to download more works, up to 2000 (or 10000) pages of works. But if you still can't download all the works, then you need to consider other ways.
 
@@ -547,7 +547,9 @@ By default the search results are sorted from newest to oldest. You can crawl an
 
 On the search page, you can click "Search Option", and then set the "Period" option to "Select a Period".
 
-You can set the "Period" option to "Select a Period". [](./images/Snipaste_2025-03-23_20-08-43.png)
+You can set the "Period" option to "Select a Period". 
+
+![](./images/Snipaste_2025-03-23_20-08-43.png)
 
 For example, you can set the timeframe to a particular year, and then view and download the work published during that year.
 
@@ -561,13 +563,13 @@ Since pixiv premium members can view 5000 pages, they are less likely to encount
 
 Some users may encounter the following error:
 
-``
+
 An error occurred while downloading with a status code of 0. The request was unsuccessful. Possible causes:
 
 1. The remaining space on the system disk may be insufficient (recommended remaining space is greater than 4GB). Please try to clear the system disk space, and then restart your browser to continue the incomplete download.
 
 2. Network error. The problem may be caused by a network proxy.
-```
+
 
 This is due to the fact that the browser directly returns a 200 failed status for requests made by the downloader (the request was successful but returned a failure. The status of the XHR request inside the downloader is 0).
 
@@ -588,7 +590,7 @@ Mature ladders are free, and their software is just a tool that doesn't come wit
 
 Once you have the ladder software, you need to go to the airport (the website that provides the VPN service) to buy the VPN service, and then use it in the ladder. The routes offered by airports are better than the money-hungry software, both in number and in speed and stability. Some airports offer free routes (the free ones are of lesser quality). If an airport doesn't work well anymore, you can switch to another one.
 
----------
+
 
 Some newcomers don't know how to use a ladder, so I'll post here the ladder site (airport) I'm using now:
 
@@ -600,7 +602,7 @@ The way to use the airport is to buy a traffic package first, then get a subscri
 
 Because there are a lot of domestic users encounter network problems, so here to post, hope to help.
 
---------
+
 
 Many airports have monthly packages (which expire when they expire) or traffic packages (where you buy a certain amount of traffic and it doesn't expire if you don't use it all).
 
@@ -612,9 +614,9 @@ So if you use a lot of traffic, consider a monthly card. If you use less traffic
 
 You may see hints in the logs when you do a crawl on the search page:
 
-``
+
 Pixiv returned empty data. The downloader has paused the crawl and will wait a few minutes before resuming.
-```
+
 
 This is because pixiv has recently made anti-crawling measures, if several hundred pages are crawled in a short period of time, a limit will be triggered and pixiv will return empty data directly, which will cause the downloader to crawl nothing.
 
@@ -646,7 +648,7 @@ If you want the fastest fetch possible, don't enable "Slow down crawl ?" and let
 
 If you download too much, you may receive an "Excessive Access Warning" email from pixiv with the following message:
 
-! [pixiv's warning email](./images/Snipaste_2025-03-23_20-13-50.png)
+![warning](./images/Snipaste_2025-03-23_20-13-50.png)
 
 If you continue to download large quantities after receiving the email, you may have your account permanently banned by pixiv.
 
