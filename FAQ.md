@@ -396,7 +396,7 @@ For example:
 
 ## Sorting of filenames in android is confusing
 
-* Android File Manager Sorting Error / Sorting Confusion / Filename Sorting Error / File Sorting Confusion *
+**Android File Manager Sorting Error / Sorting Confusion / Filename Sorting Error / File Sorting Confusion**
 
 pixiv downloads files with id and serial number, suppose a work has many images and the id and serial number are at the beginning of the filename, like this:      
 
@@ -445,7 +445,7 @@ The reason for this problem: this explorer sorts file names as strings, and this
 
 If the serial number part is parsed as a number and then sorted, this problem does not occur.
 
-How to solve this problem on Android? You can enable the setting "**Add 0 in front of the serial number ? ** " in the "More" tab of the downloader - Name. This will solve the problem.
+How to solve this problem on Android? You can enable the setting **Add 0 in front of the serial number ?**  in the "More" tab of the downloader - Name. This will solve the problem.
 
 After enabling "Fill 0 in front of serial number", the serial number will look like the following:
 
@@ -477,7 +477,7 @@ Since the length of the serial number is the same after 0 is put in front of it,
 
 ## How to make downloaded files sorted in the order they appear on the web page
 
-*Sort images, works, and files.
+*Sort images, works, and files.*
 
 How to keep the downloaded works in the same order as on the web page?
 
@@ -594,7 +594,7 @@ Once you have the ladder software, you need to go to the airport (the website th
 
 Some newcomers don't know how to use a ladder, so I'll post here the ladder site (airport) I'm using now:
 
-? >Airport URL: [[TTK Cloud](https://www.ttkcloud.icu/#/register?code=6m4hMaPu)](https://www.ttkcloud.icu/#/register?code=6m4hMaPu ':target=_ blank')
+?>Airport URL: [[TTK Cloud](https://www.ttkcloud.icu/#/register?code=6m4hMaPu)](https://www.ttkcloud.icu/#/register?code=6m4hMaPu ':target=_ blank')
 
 The domain name is Tata Kai! ttk cloud. this ladder I used for a long time, stable, fast and not easy to error.
 
@@ -630,7 +630,7 @@ This is due to pixiv's anti-crawl measures, please try again in a few minutes.
 
 ## 429 Error
 
-*429 Status code
+429 Status code
 
 The crawl encountered a 429 problem:
 
